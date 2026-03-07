@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,7 +7,7 @@
     <meta name="description" content="Read Korea like locals do." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -15,163 +15,90 @@
       <div class="container nav">
         <div class="logo">Koreframe</div>
         <nav>
-          <a href="#home">Home</a>
-          <a href="#latest">Latest</a>
-          <a href="#categories">Categories</a>
-          <a href="#story">Story</a>
+          <a href="#article">Sample Article</a>
           <a href="#membership">Membership</a>
         </nav>
-        <div class="nav-actions">
-          <a class="btn btn-ghost" href="#">Log in</a>
-          <a class="btn btn-primary" href="#membership">Join the Brief</a>
-        </div>
+        <a class="btn btn-primary" href="#membership">Join the Brief</a>
       </div>
     </header>
 
     <main>
-      <section id="home" class="hero">
+      <section class="hero compact">
         <div class="container hero-inner">
-          <p class="eyebrow">Korean context media for global readers</p>
+          <p class="eyebrow">Outstanding-inspired editorial wireframe</p>
           <h1>Korea, beyond the headline.</h1>
-          <p class="sub">Read Korea like locals do. Get the context, sentiment, and stories that don’t show up in global summaries.</p>
-          <div class="cta-group">
-            <a class="btn btn-primary" href="#latest">Read Today’s Story</a>
-            <a class="btn btn-ghost" href="#membership">Join the Brief</a>
-          </div>
+          <p class="sub">Read Korea like locals do.</p>
         </div>
       </section>
 
-      <section class="section alt" id="latest">
-        <div class="container">
-          <div class="section-head">
-            <h2>Latest Briefs</h2>
-            <p>메인 피드: 무료 사용자는 excerpt까지, 멤버는 전체 열람</p>
-          </div>
-          <div class="grid-3">
-            <article class="post-card">
-              <span class="tag">K-Society</span>
-              <h3>No-kids zones in Korea: safety, stigma, and social pressure</h3>
-              <p>Why this topic keeps resurfacing and how different generations frame fairness.</p>
-              <div class="meta">8 min read · Free preview</div>
-              <a href="#story">Read article →</a>
-            </article>
-            <article class="post-card">
-              <span class="tag">K-Trend</span>
-              <h3>Why convenience store collabs sell out in hours</h3>
-              <p>From fandom behavior to scarcity marketing, decoded in one practical brief.</p>
-              <div class="meta">6 min read · Free preview</div>
-              <a href="#story">Read article →</a>
-            </article>
-            <article class="post-card premium">
-              <span class="tag">K-Language · Premium</span>
-              <h3>Why “hyung” at work changes power dynamics</h3>
-              <p>A deep dive into language hierarchy, intimacy signals, and workplace politics.</p>
-              <div class="meta">12 min read · Members only</div>
-              <a href="#membership">Unlock with membership →</a>
-            </article>
-          </div>
-        </div>
-      </section>
+      <section id="article" class="article-page">
+        <div class="article-container">
+          <h1 class="article-title">진짜 ‘탈팡’ 했을까?… 경쟁사 6곳의 결제액, 신규 설치 수, 이탈률을 알아봤습니다</h1>
 
-      <section class="section" id="categories">
-        <div class="container">
-          <div class="section-head">
-            <h2>Categories</h2>
-            <p>상단 메뉴/카테고리 페이지에서 진입하는 섹션 구조</p>
-          </div>
-          <div class="grid-3">
-            <article class="card">
-              <h3>K-Society</h3>
-              <p>노키즈존, 저출산, 세대 갈등, 노동 문화 등 사회 이슈 맥락.</p>
-              <a href="#">Browse K-Society →</a>
-            </article>
-            <article class="card">
-              <h3>K-Language</h3>
-              <p>존댓말/반말, 호칭, 관계 언어 등 말투 뒤의 문화 코드 분석.</p>
-              <a href="#">Browse K-Language →</a>
-            </article>
-            <article class="card">
-              <h3>K-Trend</h3>
-              <p>팝업, 소비 트렌드, 밈, 라이프스타일의 현지 반응과 배경.</p>
-              <a href="#">Browse K-Trend →</a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="story" class="section alt">
-        <div class="container article-wrap">
-          <aside class="toc card">
-            <h4>Story menu</h4>
-            <a href="#">1) 이게 왜 또 뜨거울까요?</a>
-            <a href="#">2) 실제로 무슨 일이 있었나요?</a>
-            <a href="#">3) 한국에선 왜 민감할까요?</a>
-            <a href="#">4) 민심은 어떻게 갈릴까요?</a>
-            <a href="#">5) 해외 독자가 놓치기 쉬운 포인트</a>
-          </aside>
-
-          <article class="article card">
-            <div class="article-meta">K-Society · Mar 7, 2026 · 8 min read</div>
-            <h2>No-kids zones in Korea: the debate isn’t really about kids</h2>
-            <p class="lede">카페 문 앞에 붙은 한 문장, “노키즈존”. 이 문구가 붙는 순간 댓글창은 늘 뜨거워져요. 표면적으로는 아이 출입의 문제 같지만, 실제로는 ‘한국 사회가 불편을 어떻게 나누는지’에 대한 논쟁에 더 가까워요.</p>
-
-            <h3>1) 이게 왜 또 뜨거울까요? 👀</h3>
-            <p>한국에서는 특정 이슈가 한 번 끝나지 않고 주기적으로 다시 올라와요. 노키즈존이 딱 그런 주제예요. 새 매장이 오픈할 때, 관련 게시물이 바이럴될 때, 혹은 사건사고 뉴스가 붙을 때마다 여론이 다시 갈려요.</p>
-            <p>재밌는 포인트는, 사람들 대부분이 “아이를 싫어해서” 의견을 내는 게 아니라는 거예요. 각자 자기가 겪은 불편의 위치가 달라서 판단이 달라져요. 사장 입장, 부모 입장, 일반 손님 입장이 서로 다르거든요.</p>
-
-            <h3>2) 실제로 무슨 일이 있었나요?</h3>
-            <p>최근에도 서울·수도권 중심으로 일부 소형 매장들이 노키즈존 운영 방침을 재공지하면서 커뮤니티에서 논쟁이 확산됐어요. 운영자 쪽 논리는 비교적 명확해요. 공간이 좁고, 피크타임 회전율이 중요하고, 한 번의 분쟁이 리뷰와 매출에 크게 영향을 준다는 거죠.</p>
-            <p>반대로 부모 커뮤니티의 반응도 선명해요. “문제 행동을 통제하지 못한 일부 사례 때문에 전체 가족 단위가 배제된다”는 불만이 커요. 결국 포인트는 ‘권리’보다 ‘기준의 공정성’으로 이동해요.</p>
-
-            <h3>3) 한국에선 왜 민감할까요?</h3>
-            <p>한국은 밀도 높은 도시 생활 + 빠른 서비스 문화가 강해요. 작은 공간에서 빠른 회전이 기본값이다 보니, 업장과 고객 모두 ‘질서 유지’에 민감해져요. 이 환경에서는 사소한 마찰도 크게 체감돼요.</p>
-            <p>동시에 한국 사회는 저출산, 돌봄 부담, 가족 친화 정책 같은 큰 맥락을 같이 안고 있어요. 그래서 노키즈존 논쟁은 단순 매장 규칙의 문제가 아니라, “한국 사회가 가족을 얼마나 환대하고 있나?”라는 질문으로 확장돼요.</p>
-
-            <h3>4) 민심은 어떻게 갈릴까요?</h3>
-            <p><strong>A 진영(운영 현실 강조)</strong>은 “선택의 자유”를 말해요. 사장도 고객을 선택할 자유가 있고, 고객도 매장을 선택하면 된다는 논리죠.</p>
-            <p><strong>B 진영(사회적 배제 우려)</strong>은 “누적된 배제의 신호”를 말해요. 특정 집단을 지속적으로 배제하면 결국 도시의 기본 접근권이 약해진다는 거예요.</p>
-            <p>중간층도 있어요. 이들은 노키즈존 찬반보다, 업장 가이드라인(시간대 분리, 공간 분리, 명확한 행동 규칙) 같은 절충안을 선호해요.</p>
-
-            <div class="paywall-block">
-              <h4>Members-only section</h4>
-              <p>여기부터는 실제 커뮤니티 반응 패턴, 세대별 감정 키워드, 해외 독자가 오해하는 지점을 데이터 형태로 정리해요.</p>
-              <a class="btn btn-primary" href="#membership">Unlock full story</a>
+          <div class="article-meta-top">
+            <div class="author-avatar">이</div>
+            <div>
+              <div class="author-name">이상아 기자</div>
+              <div class="author-date">2026.03.07.</div>
             </div>
+          </div>
 
-            <h3 class="locked">5) 해외 독자가 놓치기 쉬운 포인트 (Premium)</h3>
-            <p class="blur">한국 댓글에서 반복되는 핵심 프레이밍: “아이” 자체보다 “통제 가능성”과 “책임 주체”에 초점이 있음…</p>
-            <p class="blur">20대/30대의 입장 차이는 가치관보다 생활 환경(주거 밀도, 근무 피로, 돌봄 현실)에서 많이 발생…</p>
-            <p class="blur">정책 논의로 연결될 때는 ‘금지/허용’ 이분법보다 ‘기준의 예측 가능성’이 더 중요한 변수로 작동…</p>
+          <div class="tag-row">
+            <span>#IT 스타트업 이슈</span>
+            <span>#스타트업 데이터 분석</span>
+            <span>#쿠팡</span>
+            <span>#탈팡</span>
+            <span>#모바일인덱스</span>
+          </div>
+
+          <article class="story-body">
+            <p class="lead">“쿠팡 말고 다른 선택지는 없을까”</p>
+            <p>지난해 말 발생한 개인정보 이슈 이후로, 이런 질문이 커뮤니티와 SNS에서 반복적으로 등장했어요.</p>
+            <p>겉으로 보면 단순한 불매 선언처럼 보이지만, 실제 소비 행동은 생각보다 훨씬 복잡하게 움직입니다.</p>
+
+            <div class="inline-emoji">🤔</div>
+
+            <p>왜냐하면 쿠팡은 단순 쇼핑앱이 아니라, 배송·가격·상품 수·멤버십 혜택이 한 번에 묶인 생활 인프라에 가깝기 때문이에요.</p>
+            <p>그래서 “떠나겠다”는 감정과 “계속 쓴다”는 행동 사이에는 늘 간극이 생깁니다.</p>
+
+            <p>이번 글에서는 데이터 기반으로 이 간극을 확인해보려고 해요. 정말 이탈이 일어났는지, 일어났다면 어디로 이동했는지요.</p>
+
+            <img class="article-image" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1600&auto=format&fit=crop" alt="delivery truck at night" />
+
+            <h2>몇 가지 흥미로운 변화가 보였습니다.</h2>
+            <p>쿠팡의 절대적 영향력은 여전히 강했지만, 이전과 다른 소비 패턴도 동시에 관찰됐습니다.</p>
+            <p>일부 사용자는 대체 앱을 ‘보조 선택지’로 가져가기 시작했고, 특정 카테고리에서만 이탈하는 분화 현상도 보였어요.</p>
+            <p>즉, 완전한 탈출보다 ‘부분 이동’이 더 강하게 나타났다는 뜻입니다.</p>
+
+            <p>이제부터는 결제액, 신규 설치 수, 유지율 데이터를 순서대로 보면서 이 흐름을 풀어볼게요.</p>
           </article>
+
+          <section class="paywall-overlay">
+            <div class="fade"></div>
+            <div class="paywall-box">
+              <p class="golden">🔔 골든벨을 울려보세요!</p>
+              <p class="hint">골든벨을 울리면 이 글이 전체 공개됩니다.</p>
+              <button class="btn-pay ghost">지금 보고 있는 이 기사 구매하기</button>
+
+              <p class="membership-copy">월 13,900원에 멤버십에 가입하면<br/>모든 멤버십 전용 콘텐츠를 볼 수 있습니다.</p>
+              <button class="btn-pay primary">멤버십 결제 ↗</button>
+            </div>
+          </section>
         </div>
       </section>
 
-      <section id="membership" class="section paywall">
-        <div class="container paywall-inner">
-          <h2>Membership</h2>
-          <p><strong>Free</strong>: headline + excerpt + selected briefs</p>
-          <p><strong>Pro</strong>: full stories, sentiment maps, weekly deep dives, archive access</p>
-          <div class="cta-group center">
-            <a class="btn btn-primary" href="#">Start Membership</a>
-            <a class="btn btn-ghost" href="#">See plan details</a>
-          </div>
+      <section id="membership" class="section membership-note">
+        <div class="container">
+          <h2>적용한 스타일 요소</h2>
+          <ul>
+            <li>다크 배경 + 넉넉한 행간</li>
+            <li>질문형 오프닝 + 대화체 문장</li>
+            <li>상단 기자 메타/태그</li>
+            <li>본문 중간 이미지 삽입</li>
+            <li>그라데이션 페이드 + 페이월 CTA</li>
+          </ul>
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div>
-          <strong>Koreframe</strong>
-          <p>Read Korea like locals do.</p>
-        </div>
-        <div class="footer-links">
-          <a href="#">About</a>
-          <a href="#">Contact</a>
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-        </div>
-      </div>
-    </footer>
   </body>
 </html>
