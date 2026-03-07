@@ -15,83 +15,130 @@
       <div class="container nav">
         <div class="logo">Koreframe</div>
         <nav>
-          <a href="#why">Why</a>
-          <a href="#preview">Preview</a>
-          <a href="#pillars">Pillars</a>
+          <a href="#home">Home</a>
+          <a href="#latest">Latest</a>
+          <a href="#categories">Categories</a>
+          <a href="#story">Story</a>
           <a href="#membership">Membership</a>
         </nav>
-        <a class="btn btn-ghost" href="#membership">Join the Brief</a>
+        <div class="nav-actions">
+          <a class="btn btn-ghost" href="#">Log in</a>
+          <a class="btn btn-primary" href="#membership">Join the Brief</a>
+        </div>
       </div>
     </header>
 
     <main>
-      <section class="hero">
+      <section id="home" class="hero">
         <div class="container hero-inner">
           <p class="eyebrow">Korean context media for global readers</p>
           <h1>Korea, beyond the headline.</h1>
           <p class="sub">Read Korea like locals do. Get the context, sentiment, and stories that don’t show up in global summaries.</p>
           <div class="cta-group">
-            <a class="btn btn-primary" href="#membership">Join the Brief</a>
-            <a class="btn btn-ghost" href="#preview">Read Today’s Story</a>
+            <a class="btn btn-primary" href="#latest">Read Today’s Story</a>
+            <a class="btn btn-ghost" href="#membership">Join the Brief</a>
           </div>
         </div>
       </section>
 
-      <section id="why" class="section">
+      <section class="section alt" id="latest">
         <div class="container">
-          <h2>Why Koreframe</h2>
+          <div class="section-head">
+            <h2>Latest Briefs</h2>
+            <p>메인 피드: 무료 사용자는 excerpt까지, 멤버는 전체 열람</p>
+          </div>
           <div class="grid-3">
-            <article class="card">
-              <h3>Context</h3>
-              <p>We explain the social and cultural background behind each Korean story.</p>
-            </article>
-            <article class="card">
-              <h3>Sentiment</h3>
-              <p>See how locals react across communities—not just what happened.</p>
-            </article>
-            <article class="card">
-              <h3>Cultural Decode</h3>
-              <p>Understand the hidden norms, language, and signals that shape the news.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="preview" class="section alt">
-        <div class="container">
-          <h2>Today’s Brief Preview</h2>
-          <div class="grid-2">
             <article class="post-card">
               <span class="tag">K-Society</span>
               <h3>No-kids zones in Korea: safety, stigma, and social pressure</h3>
-              <p>Why this topic keeps resurfacing and what different generations think about it.</p>
-              <a href="#">Read excerpt →</a>
+              <p>Why this topic keeps resurfacing and how different generations frame fairness.</p>
+              <div class="meta">8 min read · Free preview</div>
+              <a href="#story">Read article →</a>
             </article>
             <article class="post-card">
               <span class="tag">K-Trend</span>
               <h3>Why convenience store collabs sell out in hours</h3>
-              <p>From fandom behavior to scarcity marketing, decoded in one brief.</p>
-              <a href="#">Read excerpt →</a>
+              <p>From fandom behavior to scarcity marketing, decoded in one practical brief.</p>
+              <div class="meta">6 min read · Free preview</div>
+              <a href="#story">Read article →</a>
+            </article>
+            <article class="post-card premium">
+              <span class="tag">K-Language · Premium</span>
+              <h3>Why “hyung” at work changes power dynamics</h3>
+              <p>A deep dive into language hierarchy, intimacy signals, and workplace politics.</p>
+              <div class="meta">12 min read · Members only</div>
+              <a href="#membership">Unlock with membership →</a>
             </article>
           </div>
+        </div>
+      </section>
+
+      <section class="section" id="categories">
+        <div class="container">
+          <div class="section-head">
+            <h2>Categories</h2>
+            <p>상단 메뉴/카테고리 페이지에서 진입하는 섹션 구조</p>
+          </div>
+          <div class="grid-3">
+            <article class="card">
+              <h3>K-Society</h3>
+              <p>노키즈존, 저출산, 세대 갈등, 노동 문화 등 사회 이슈 맥락.</p>
+              <a href="#">Browse K-Society →</a>
+            </article>
+            <article class="card">
+              <h3>K-Language</h3>
+              <p>존댓말/반말, 호칭, 관계 언어 등 말투 뒤의 문화 코드 분석.</p>
+              <a href="#">Browse K-Language →</a>
+            </article>
+            <article class="card">
+              <h3>K-Trend</h3>
+              <p>팝업, 소비 트렌드, 밈, 라이프스타일의 현지 반응과 배경.</p>
+              <a href="#">Browse K-Trend →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="story" class="section alt">
+        <div class="container article-wrap">
+          <aside class="toc card">
+            <h4>Story menu</h4>
+            <a href="#">Overview</a>
+            <a href="#">Local reactions</a>
+            <a href="#">What outsiders miss</a>
+            <a href="#">Takeaways</a>
+          </aside>
+
+          <article class="article card">
+            <div class="article-meta">K-Society · Mar 7, 2026 · 8 min read</div>
+            <h2>No-kids zones in Korea: the debate isn’t really about kids</h2>
+            <p class="lede">Some venues say they’re protecting customers. Others say they’re normalizing exclusion. Locals aren’t arguing about children alone—they’re arguing about what public space should feel like.</p>
+
+            <h3>Free preview</h3>
+            <p>In Korean communities, this issue resurfaces whenever a new cafe or restaurant posts a “No Kids Zone” sign. Supporters frame it as operational reality: small spaces, high turnover, and staff burnout. Critics frame it as social sorting—where inconvenience becomes justification for exclusion.</p>
+            <p>The generational split is subtle. Many younger workers sympathize with service staff, while many parents in their 30s see the trend as a signal that urban life is getting less family-compatible.</p>
+
+            <div class="paywall-block">
+              <h4>Members-only section</h4>
+              <p>Unlock local comment clusters, sentiment breakdown, and policy implications.</p>
+              <a class="btn btn-primary" href="#membership">Unlock full story</a>
+            </div>
+
+            <h3 class="locked">Premium content (hidden for free users)</h3>
+            <p class="blur">Top 5 comment clusters by tone, mapped against age groups and district-level differences…</p>
+            <p class="blur">What this debate reveals about Korean service labor norms and “public manners” expectations…</p>
+          </article>
         </div>
       </section>
 
       <section id="membership" class="section paywall">
         <div class="container paywall-inner">
-          <h2>Members get the full context</h2>
-          <p>Free readers get a preview. Members unlock full analysis, deeper sentiment snapshots, and weekly insider briefings.</p>
-          <a class="btn btn-primary" href="#">Start Membership</a>
-        </div>
-      </section>
-
-      <section id="pillars" class="section">
-        <div class="container">
-          <h2>Content Pillars</h2>
-          <div class="pillars">
-            <span>K-Society</span>
-            <span>K-Language</span>
-            <span>K-Trend</span>
+          <h2>Membership</h2>
+          <p><strong>Free</strong>: headline + excerpt + selected briefs</p>
+          <p><strong>Pro</strong>: full stories, sentiment maps, weekly deep dives, archive access</p>
+          <div class="cta-group center">
+            <a class="btn btn-primary" href="#">Start Membership</a>
+            <a class="btn btn-ghost" href="#">See plan details</a>
           </div>
         </div>
       </section>
