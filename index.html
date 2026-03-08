@@ -38,6 +38,36 @@
           </div>
         </div>
       </section>
+      <section class="hero-gallery section" aria-label="Korean visual highlights">
+        <div class="container">
+          <div class="section-head">
+            <h2>Korea in Focus</h2>
+            <p>Seoul nightscape, hanok alleys, and everyday street moments.</p>
+          </div>
+          <div class="carousel" id="koreaCarousel">
+            <div class="slide active">
+              <img src="https://images.unsplash.com/photo-1538485399081-7191377e8241?q=80&w=2200&auto=format&fit=crop" alt="Seoul city skyline at night" loading="eager" />
+              <div class="caption">Seoul skyline at night</div>
+            </div>
+            <div class="slide">
+              <img src="https://images.unsplash.com/photo-1535189043414-47a3c49a0bed?q=80&w=2200&auto=format&fit=crop" alt="Traditional Korean hanok village street" loading="lazy" />
+              <div class="caption">Hanok village morning light</div>
+            </div>
+            <div class="slide">
+              <img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?q=80&w=2200&auto=format&fit=crop" alt="Korean street food and market atmosphere" loading="lazy" />
+              <div class="caption">Street food culture in motion</div>
+            </div>
+            <div class="slide">
+              <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2200&auto=format&fit=crop" alt="Gyeongbokgung palace with city backdrop" loading="lazy" />
+              <div class="caption">Tradition meets modern Seoul</div>
+            </div>
+            <button class="carousel-btn prev" aria-label="Previous image">‹</button>
+            <button class="carousel-btn next" aria-label="Next image">›</button>
+            <div class="dots" aria-hidden="true"></div>
+          </div>
+          <p class="image-credit">Photos: Unsplash (license-friendly for commercial/editorial use)</p>
+        </div>
+      </section>
 
       <section id="why" class="section">
         <div class="container">
@@ -79,5 +109,48 @@
         </div>
       </section>
     </main>
+      <script>
+      (function initCarousel(){
+        const root = document.getElementById('koreaCarousel');
+        if (!root) return;
+        const slides = Array.from(root.querySelectorAll('.slide'));
+        const dotsWrap = root.querySelector('.dots');
+        const prev = root.querySelector('.prev');
+        const next = root.querySelector('.next');
+        let idx = 0;
+        let timer;
+
+        slides.forEach((_, i) => {
+          const b = document.createElement('button');
+          b.className = 'dot' + (i === 0 ? ' active' : '');
+          b.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+          b.addEventListener('click', () => go(i));
+          dotsWrap.appendChild(b);
+        });
+
+        const dots = Array.from(root.querySelectorAll('.dot'));
+
+        function go(n){
+          slides[idx].classList.remove('active');
+          dots[idx].classList.remove('active');
+          idx = (n + slides.length) % slides.length;
+          slides[idx].classList.add('active');
+          dots[idx].classList.add('active');
+        }
+
+        function auto(){
+          clearInterval(timer);
+          timer = setInterval(() => go(idx + 1), 4500);
+        }
+
+        prev.addEventListener('click', () => { go(idx - 1); auto(); });
+        next.addEventListener('click', () => { go(idx + 1); auto(); });
+        root.addEventListener('mouseenter', () => clearInterval(timer));
+        root.addEventListener('mouseleave', auto);
+
+        auto();
+      })();
+    </script>
+
   </body>
 </html>
