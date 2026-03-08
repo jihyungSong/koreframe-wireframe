@@ -70,7 +70,7 @@ nav a[aria-current="page"] { color: #fff; font-weight: 700; }
 .chip-row { display:flex; gap:8px; flex-wrap:wrap; }
 .chip { padding:6px 10px; border-radius:999px; border:1px solid var(--border); color: var(--muted); font-size:.86rem; }
 .chip.active { color:#fff; border-color:#4c6ac2; background:rgba(121,168,255,.12); }
-.pricing-grid { display:grid; gap:14px; grid-template-columns: repeat(2, minmax(0,1fr)); }
+.pricing-grid { display:grid; gap:14px; grid-template-columns: repeat(3, minmax(0,1fr)); }
 .plan-card .plan-price { font-size:1.5rem; font-weight:800; margin:6px 0 8px; }
 .plan-list { margin:0 0 16px 18px; color:#d8e0ff; }
 .plan-list li { margin:6px 0; }
@@ -88,3 +88,5 @@ nav a[aria-current="page"] { color: #fff; font-weight: 700; }
 .footer-links a{text-decoration:none;color:var(--muted)}
 .footer-links a:hover{color:#fff}
 @media (max-width:860px){.footer-inner{flex-direction:column}}
+
+.annual-note{margin:10px 0 0;color:#b9c8f8;font-size:.95rem}
