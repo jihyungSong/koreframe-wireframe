@@ -1,16 +1,13 @@
 <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="512" height="512" rx="112" fill="#12151C"/>
+  <rect x="76" y="76" width="360" height="360" rx="86" stroke="#2A3245" stroke-width="12"/>
 
-  <!-- subtle frame -->
-  <rect x="88" y="88" width="336" height="336" rx="72" stroke="#2A3245" stroke-width="14"/>
-
-  <!-- taegeuk-inspired swirl -->
-  <circle cx="256" cy="256" r="122" fill="#E7EBF6"/>
-  <path d="M256 134C188.6 134 134 188.6 134 256C134 323.4 188.6 378 256 378C323.4 378 378 323.4 378 256C378 224.4 365.9 195.7 346.1 174.1C326.2 195.7 297.6 208.8 266 208.8C234.4 208.8 205.8 195.7 185.9 174.1C166.1 195.7 154 224.4 154 256C154 312.3 199.7 358 256 358C312.3 358 358 312.3 358 256C358 233.8 350.9 213.2 338.8 196.4C321.6 215.6 295.2 228 266 228C236.8 228 210.4 215.6 193.2 196.4" fill="#79A8FF"/>
-  <circle cx="226" cy="226" r="30" fill="#79A8FF"/>
-  <circle cx="286" cy="286" r="30" fill="#12151C"/>
-
-  <!-- minimal signal notch for brand tie-in -->
-  <path d="M154 360L184 330" stroke="#79A8FF" stroke-width="10" stroke-linecap="round"/>
-  <path d="M328 182L358 152" stroke="#79A8FF" stroke-width="10" stroke-linecap="round"/>
+  <!-- classic taegeuk-inspired symbol -->
+  <g transform="translate(256 256)">
+    <circle cx="0" cy="0" r="128" fill="#FFFFFF"/>
+    <path d="M0 -128C70.692 -128 128 -70.692 128 0C128 70.692 70.692 128 0 128C-70.692 128 -128 70.692 -128 0C-128 -70.692 -70.692 -128 0 -128Z" fill="#CD2E3A"/>
+    <path d="M0 -128C-70.692 -128 -128 -70.692 -128 0C-128 70.692 -70.692 128 0 128C70.692 128 128 70.692 128 0C128 -70.692 70.692 -128 0 -128Z" fill="#0047A0"/>
+    <circle cx="0" cy="-64" r="64" fill="#0047A0"/>
+    <circle cx="0" cy="64" r="64" fill="#CD2E3A"/>
+  </g>
 </svg>
