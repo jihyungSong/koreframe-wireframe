@@ -45,21 +45,23 @@
             <p>Seoul nightscape, hanok alleys, and everyday street moments.</p>
           </div>
           <div class="carousel" id="koreaCarousel">
-            <div class="slide active">
-              <img src="https://images.unsplash.com/photo-1538485399081-7191377e8241?q=80&w=2200&auto=format&fit=crop" alt="Seoul city skyline at night" loading="eager" />
-              <div class="caption">Seoul skyline at night</div>
-            </div>
-            <div class="slide">
-              <img src="https://images.unsplash.com/photo-1535189043414-47a3c49a0bed?q=80&w=2200&auto=format&fit=crop" alt="Traditional Korean hanok village street" loading="lazy" />
-              <div class="caption">Hanok village morning light</div>
-            </div>
-            <div class="slide">
-              <img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?q=80&w=2200&auto=format&fit=crop" alt="Korean street food and market atmosphere" loading="lazy" />
-              <div class="caption">Street food culture in motion</div>
-            </div>
-            <div class="slide">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Seoul_Montage_2016.png" alt="Seoul city montage" loading="lazy" />
-              <div class="caption">Seoul city highlights</div>
+            <div class="slides-track">
+              <div class="slide">
+                <img src="https://images.unsplash.com/photo-1538485399081-7191377e8241?q=80&w=2200&auto=format&fit=crop" alt="Seoul city skyline at night" loading="eager" />
+                <div class="caption">Seoul skyline at night</div>
+              </div>
+              <div class="slide">
+                <img src="https://images.unsplash.com/photo-1535189043414-47a3c49a0bed?q=80&w=2200&auto=format&fit=crop" alt="Traditional Korean hanok village street" loading="lazy" />
+                <div class="caption">Hanok village morning light</div>
+              </div>
+              <div class="slide">
+                <img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?q=80&w=2200&auto=format&fit=crop" alt="Korean street food and market atmosphere" loading="lazy" />
+                <div class="caption">Street food culture in motion</div>
+              </div>
+              <div class="slide">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Seoul_Montage_2016.png" alt="Seoul city montage" loading="lazy" />
+                <div class="caption">Seoul city highlights</div>
+              </div>
             </div>
             <button class="carousel-btn prev" aria-label="Previous image">‹</button>
             <button class="carousel-btn next" aria-label="Next image">›</button>
@@ -113,6 +115,7 @@
       (function initCarousel(){
         const root = document.getElementById('koreaCarousel');
         if (!root) return;
+        const track = root.querySelector('.slides-track');
         const slides = Array.from(root.querySelectorAll('.slide'));
         const dotsWrap = root.querySelector('.dots');
         const prev = root.querySelector('.prev');
@@ -127,15 +130,16 @@
           b.addEventListener('click', () => go(i));
           dotsWrap.appendChild(b);
         });
-
         const dots = Array.from(root.querySelectorAll('.dot'));
 
+        function render(){
+          track.style.transform = `translateX(-${idx * 100}%)`;
+          dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+        }
+
         function go(n){
-          slides[idx].classList.remove('active');
-          dots[idx].classList.remove('active');
           idx = (n + slides.length) % slides.length;
-          slides[idx].classList.add('active');
-          dots[idx].classList.add('active');
+          render();
         }
 
         function auto(){
@@ -148,6 +152,7 @@
         root.addEventListener('mouseenter', () => clearInterval(timer));
         root.addEventListener('mouseleave', auto);
 
+        render();
         auto();
       })();
     </script>
