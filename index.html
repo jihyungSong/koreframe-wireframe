@@ -153,6 +153,7 @@
         root.addEventListener('mouseleave', auto);
 
         render();
+        requestAnimationFrame(() => root.classList.add('ready'));
         auto();
       })();
     </script>
