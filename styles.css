@@ -76,3 +76,6 @@ nav a[aria-current="page"] { color: #fff; font-weight: 700; }
 .plan-list li { margin:6px 0; }
 .plan-card.featured { border-color:#4c6ac2; box-shadow:0 0 0 1px rgba(121,168,255,.2) inset; }
 @media (max-width:860px){ .pricing-grid{ grid-template-columns:1fr; } }
+
+
+.brief-thumb{width:100%;height:160px;object-fit:cover;border-radius:10px;border:1px solid var(--border);margin:0 0 12px;display:block}
