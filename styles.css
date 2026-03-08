@@ -184,3 +184,5 @@ nav a[aria-current="page"] { color: #fff; font-weight: 700; }
 
 .oauth-google{display:flex;align-items:center;justify-content:center;gap:10px}
 .g-icon{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:999px;background:#fff;color:#4285F4;font-weight:800;font-family:Inter,system-ui,sans-serif;font-size:.9rem}
+
+.join-single{grid-template-columns:minmax(0,680px);justify-content:center}
