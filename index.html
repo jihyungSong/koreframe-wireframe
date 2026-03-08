@@ -67,7 +67,7 @@
       </section>
 
       <section id="briefs" class="section alt">
-        <div class="container">
+        <div class="container container-wide">
           <h2>Latest Briefs</h2>
           <div class="briefs-carousel" id="briefsCarousel">
             <div class="briefs-track">
@@ -91,6 +91,13 @@
                 <h3>Why convenience store collabs sell out in hours</h3>
                 <p>From fandom behaviour to scarcity marketing, decoded in one brief.</p>
                 <a href="article-uk.html">Read article →</a>
+              </article>
+              <article class="post-card premium brief-slide">
+                <img class="brief-thumb" src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?q=80&w=1400&auto=format&fit=crop" alt="Korean city crowd" loading="lazy" />
+                <span class="tag">K-Society · Members Only</span>
+                <h3>How Korean comment threads split by generation</h3>
+                <p>A deeper look at sentiment clusters behind recurring social debates.</p>
+                <a href="membership.html">Unlock with membership →</a>
               </article>
             </div>
             <button class="carousel-btn prev" aria-label="Previous brief">‹</button>
@@ -207,29 +214,54 @@
         const next = root.querySelector('.next');
         let idx = 0;
         let timer;
+        let slidesPerView = window.innerWidth >= 980 ? 2 : 1;
+        let maxIndex = Math.max(0, slides.length - slidesPerView);
 
-        slides.forEach((_, i) => {
-          const b = document.createElement('button');
-          b.className = 'dot' + (i === 0 ? ' active' : '');
-          b.setAttribute('aria-label', 'Go to brief ' + (i + 1));
-          b.addEventListener('click', () => go(i));
-          dotsWrap.appendChild(b);
-        });
-        const dots = Array.from(root.querySelectorAll('.dot'));
+        function rebuildDots(){
+          dotsWrap.innerHTML = '';
+          for (let i = 0; i <= maxIndex; i++) {
+            const b = document.createElement('button');
+            b.className = 'dot' + (i === idx ? ' active' : '');
+            b.setAttribute('aria-label', 'Go to briefs set ' + (i + 1));
+            b.addEventListener('click', () => go(i));
+            dotsWrap.appendChild(b);
+          }
+        }
 
         function render(){
-          track.style.transform = `translateX(-${idx * 100}%)`;
+          const shift = (100 / slidesPerView) * idx;
+          track.style.transform = `translateX(-${shift}%)`;
+          const dots = Array.from(root.querySelectorAll('.dot'));
           dots.forEach((d, i) => d.classList.toggle('active', i === idx));
         }
-        function go(n){ idx = (n + slides.length) % slides.length; render(); }
-        function auto(){ clearInterval(timer); timer = setInterval(() => go(idx + 1), 5000); }
+
+        function recalc(){
+          slidesPerView = window.innerWidth >= 980 ? 2 : 1;
+          maxIndex = Math.max(0, slides.length - slidesPerView);
+          if (idx > maxIndex) idx = 0;
+          rebuildDots();
+          render();
+        }
+
+        function go(n){
+          if (n < 0) idx = maxIndex;
+          else if (n > maxIndex) idx = 0;
+          else idx = n;
+          render();
+        }
+
+        function auto(){
+          clearInterval(timer);
+          timer = setInterval(() => go(idx + 1), 5200);
+        }
 
         prev.addEventListener('click', () => { go(idx - 1); auto(); });
         next.addEventListener('click', () => { go(idx + 1); auto(); });
         root.addEventListener('mouseenter', () => clearInterval(timer));
         root.addEventListener('mouseleave', auto);
+        window.addEventListener('resize', recalc);
 
-        render();
+        recalc();
         requestAnimationFrame(() => root.classList.add('ready'));
         auto();
       })();
