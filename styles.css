@@ -192,3 +192,15 @@ nav a[aria-current="page"] { color: #fff; font-weight: 700; }
 .oauth-google{background:#ffffff;color:#1f2937;border-color:#d1d5db}
 .oauth-google:hover{background:#f3f4f6}
 .oauth-google span:last-child{color:#1f2937;font-weight:600}
+
+
+/* latest briefs carousel */
+.briefs-carousel{position:relative;overflow:hidden;border-radius:14px}
+.briefs-track{display:flex;width:100%;transform:translateX(0)}
+.briefs-carousel.ready .briefs-track{transition:transform 620ms cubic-bezier(.22,.61,.36,1)}
+.brief-slide{flex:0 0 100%;margin:0}
+#briefs .carousel-btn{width:38px;height:38px;top:46%}
+#briefs .dots{bottom:10px}
+@media (min-width:900px){
+  .briefs-carousel{max-width:760px}
+}

@@ -69,21 +69,33 @@
       <section id="briefs" class="section alt">
         <div class="container">
           <h2>Latest Briefs</h2>
-          <div class="grid-2">
-            <article class="post-card">
-              <img class="brief-thumb" src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=1400&auto=format&fit=crop" alt="Korean urban public space" loading="lazy" />
-              <span class="tag">K-Society · Free Preview</span>
-              <h3>No-kids zones in Korea: the debate isn’t really about kids</h3>
-              <p>What looks like a parenting issue is often a public-space and labour issue.</p>
-              <a href="article.html">Read article →</a>
-            </article>
-            <article class="post-card premium">
-              <img class="brief-thumb" src="https://images.unsplash.com/photo-1517154421773-0529f29ea451?q=80&w=1400&auto=format&fit=crop" alt="Korean office discussion" loading="lazy" />
-              <span class="tag">K-Language · Members Only</span>
-              <h3>Why “hyung” at work changes power dynamics</h3>
-              <p>Language hierarchy decoded with real-world reactions.</p>
-              <a href="membership.html">Unlock with membership →</a>
-            </article>
+          <div class="briefs-carousel" id="briefsCarousel">
+            <div class="briefs-track">
+              <article class="post-card brief-slide">
+                <img class="brief-thumb" src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=1400&auto=format&fit=crop" alt="Korean urban public space" loading="lazy" />
+                <span class="tag">K-Society · Free Preview</span>
+                <h3>No-kids zones in Korea: the debate isn’t really about kids</h3>
+                <p>What looks like a parenting issue is often a public-space and labour issue.</p>
+                <a href="article.html">Read article →</a>
+              </article>
+              <article class="post-card premium brief-slide">
+                <img class="brief-thumb" src="https://images.unsplash.com/photo-1517154421773-0529f29ea451?q=80&w=1400&auto=format&fit=crop" alt="Korean office discussion" loading="lazy" />
+                <span class="tag">K-Language · Members Only</span>
+                <h3>Why “hyung” at work changes power dynamics</h3>
+                <p>Language hierarchy decoded with real-world reactions.</p>
+                <a href="membership.html">Unlock with membership →</a>
+              </article>
+              <article class="post-card brief-slide">
+                <img class="brief-thumb" src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?q=80&w=1400&auto=format&fit=crop" alt="Convenience store trend" loading="lazy" />
+                <span class="tag">K-Trend · Free Preview</span>
+                <h3>Why convenience store collabs sell out in hours</h3>
+                <p>From fandom behaviour to scarcity marketing, decoded in one brief.</p>
+                <a href="article-uk.html">Read article →</a>
+              </article>
+            </div>
+            <button class="carousel-btn prev" aria-label="Previous brief">‹</button>
+            <button class="carousel-btn next" aria-label="Next brief">›</button>
+            <div class="dots" aria-hidden="true"></div>
           </div>
           <p class="section-link"><a href="briefs.html">Browse all briefs →</a></p>
         </div>
@@ -173,6 +185,44 @@
         }
         function go(n){ idx = (n + slides.length) % slides.length; render(); }
         function auto(){ clearInterval(timer); timer = setInterval(() => go(idx + 1), 4500); }
+
+        prev.addEventListener('click', () => { go(idx - 1); auto(); });
+        next.addEventListener('click', () => { go(idx + 1); auto(); });
+        root.addEventListener('mouseenter', () => clearInterval(timer));
+        root.addEventListener('mouseleave', auto);
+
+        render();
+        requestAnimationFrame(() => root.classList.add('ready'));
+        auto();
+      })();
+
+
+      (function initBriefsCarousel(){
+        const root = document.getElementById('briefsCarousel');
+        if (!root) return;
+        const track = root.querySelector('.briefs-track');
+        const slides = Array.from(root.querySelectorAll('.brief-slide'));
+        const dotsWrap = root.querySelector('.dots');
+        const prev = root.querySelector('.prev');
+        const next = root.querySelector('.next');
+        let idx = 0;
+        let timer;
+
+        slides.forEach((_, i) => {
+          const b = document.createElement('button');
+          b.className = 'dot' + (i === 0 ? ' active' : '');
+          b.setAttribute('aria-label', 'Go to brief ' + (i + 1));
+          b.addEventListener('click', () => go(i));
+          dotsWrap.appendChild(b);
+        });
+        const dots = Array.from(root.querySelectorAll('.dot'));
+
+        function render(){
+          track.style.transform = `translateX(-${idx * 100}%)`;
+          dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+        }
+        function go(n){ idx = (n + slides.length) % slides.length; render(); }
+        function auto(){ clearInterval(timer); timer = setInterval(() => go(idx + 1), 5000); }
 
         prev.addEventListener('click', () => { go(idx - 1); auto(); });
         next.addEventListener('click', () => { go(idx + 1); auto(); });
