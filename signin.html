@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Koreframe — Membership</title>
-    <meta name="description" content="Membership plans and benefits for Koreframe." />
+    <title>Koreframe — Sign in</title>
+    <meta name="description" content="Sign in to Koreframe." />
     <link rel="icon" type="image/svg+xml" href="assets/koreframe-icon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,69 +18,51 @@
         <nav>
           <a href="index.html">Home</a>
           <a href="briefs.html">Briefs</a>
-          <a href="membership.html" aria-current="page">Membership</a>
-          <a href="signin.html">Sign in</a>
+          <a href="membership.html">Membership</a>
+          <a href="signin.html" aria-current="page">Sign in</a>
         </nav>
-        <a class="btn btn-primary" href="#">Join</a>
+        <a class="btn btn-primary" href="join.html">Join</a>
       </div>
     </header>
 
     <main>
-      <section class="section">
-        <div class="container">
-          <h1>Membership</h1>
-          <p class="sub">Choose how deeply you want to read Korea.</p>
-        </div>
-      </section>
+      <section class="section auth-wrap">
+        <div class="container auth-grid">
+          <article class="card auth-card">
+            <h1>Welcome back</h1>
+            <p class="sub">Sign in to continue reading premium briefs.</p>
 
-      <section class="section alt">
-        <div class="container pricing-grid">
-          <article class="card plan-card">
-            <h3>Free</h3>
-            <p class="plan-price">$0</p>
-            <ul class="plan-list">
-              <li>Headline + excerpt access</li>
-              <li>Selected free briefs</li>
-              <li>Basic email updates</li>
-            </ul>
-            <a class="btn btn-ghost" href="briefs.html">Continue Free</a>
+            <label>Email</label>
+            <input type="email" placeholder="you@example.com" />
+
+            <label>Password</label>
+            <input type="password" placeholder="••••••••" />
+
+            <div class="auth-row">
+              <label class="remember"><input type="checkbox" /> Remember me</label>
+              <a href="#">Forgot password?</a>
+            </div>
+
+            <button class="btn btn-primary auth-btn">Sign in</button>
+            <button class="btn btn-ghost auth-btn">Continue with Google</button>
+
+            <p class="auth-note">No account yet? <a href="join.html">Create one</a></p>
           </article>
 
-          <article class="card plan-card featured">
-            <h3>Pro</h3>
-            <p class="plan-price">$2.9 / month</p>
+          <article class="card auth-side">
+            <h3>What you get with Pro</h3>
             <ul class="plan-list">
-              <li>Full stories + premium archive access</li>
+              <li>Full stories and premium archive</li>
               <li>Personalised topic alerts (email/RSS)</li>
-              <li>Priority weekly context briefing</li>
+              <li>Weekly context digest</li>
             </ul>
-            <a class="btn btn-primary" href="#">Join</a>
+            <a class="btn btn-ghost" href="membership.html">View plans</a>
           </article>
-
-          <article class="card plan-card">
-            <h3>Yearly</h3>
-            <p class="plan-price">$21 / year</p>
-            <ul class="plan-list">
-              <li>Everything in Pro</li>
-              <li>Save 40% vs monthly billing</li>
-              <li>Best for long-term readers</li>
-            </ul>
-            <a class="btn btn-primary" href="#">Start Yearly</a>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <h2>FAQ</h2>
-          <div class="grid-2">
-            <article class="card"><h3>Can I cancel anytime?</h3><p>Yes. Cancel from account settings at any time.</p></article>
-            <article class="card"><h3>Do I get instant access?</h3><p>Yes. Premium access is enabled right after payment.</p></article>
-          </div>
         </div>
       </section>
     </main>
-        <footer class="site-footer">
+
+    <footer class="site-footer">
       <div class="container footer-top">
         <div class="footer-brand">
           <div class="logo footer-logo"><img src="assets/koreframe-icon.svg" alt="Koreframe icon" class="logo-icon" /> <span>Koreframe</span></div>
@@ -112,6 +94,5 @@
         <span class="footer-note">Korean context media for global readers.</span>
       </div>
     </footer>
-
   </body>
 </html>
