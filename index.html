@@ -151,7 +151,6 @@
         next.addEventListener('click', () => { go(idx + 1); auto(); });
         root.addEventListener('mouseenter', () => clearInterval(timer));
         root.addEventListener('mouseleave', auto);
-        window.addEventListener('resize', render);
 
         render();
         requestAnimationFrame(() => root.classList.add('ready'));
