@@ -35,9 +35,9 @@
   overflow: hidden;
   background: #0f131b;
 }
- .slides-track { display:flex; width:100%; transform: translateX(0); }
+ .slides-track { display:grid; grid-auto-flow:column; grid-auto-columns:100%; width:100%; transform: translateX(0); will-change: transform; }
 .carousel.ready .slides-track { transition: transform 650ms cubic-bezier(.22,.61,.36,1); }
-.slide { flex: 0 0 100%; width:100%; position:relative; }
+.slide { width:100%; position:relative; }
 .slide img {
   width: 100%;
   height: min(58vw, 520px);
