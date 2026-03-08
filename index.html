@@ -27,47 +27,38 @@
     </header>
 
     <main>
-      <section class="hero">
-        <div class="container hero-inner">
-          <p class="eyebrow">Korean context media for global readers</p>
-          <h1>Korea, beyond the headline.</h1>
-          <p class="sub">Read Korea like locals do. Get the context, sentiment, and stories that don’t show up in global summaries.</p>
-          <div class="cta-group">
-            <a class="btn btn-primary" href="article.html">Read Today’s Story</a>
-            <a class="btn btn-ghost" href="#membership">Join the Brief</a>
-          </div>
-        </div>
-      </section>
-      <section class="hero-gallery section" aria-label="Korean visual highlights">
-        <div class="container">
-          <div class="section-head">
-            <h2>Korea in Focus</h2>
-            <p>Seoul nightscape, hanok alleys, and everyday street moments.</p>
-          </div>
-          <div class="carousel" id="koreaCarousel">
-            <div class="slides-track">
-              <div class="slide">
-                <img src="https://images.unsplash.com/photo-1538485399081-7191377e8241?q=80&w=2200&auto=format&fit=crop" alt="Seoul city skyline at night" loading="eager" />
-                <div class="caption">Seoul skyline at night</div>
-              </div>
-              <div class="slide">
-                <img src="https://images.unsplash.com/photo-1535189043414-47a3c49a0bed?q=80&w=2200&auto=format&fit=crop" alt="Traditional Korean hanok village street" loading="lazy" />
-                <div class="caption">Hanok village morning light</div>
-              </div>
-              <div class="slide">
-                <img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?q=80&w=2200&auto=format&fit=crop" alt="Korean street food and market atmosphere" loading="lazy" />
-                <div class="caption">Street food culture in motion</div>
-              </div>
-              <div class="slide">
-                <img src="https://images.unsplash.com/photo-1548115184-bc6544d06a58?q=80&w=2200&auto=format&fit=crop" alt="Seoul skyline and city lights" loading="lazy" />
-                <div class="caption">Seoul skyline highlights</div>
-              </div>
+      <section class="hero-visual" id="home" aria-label="Korean visual hero">
+        <div class="hero-carousel" id="koreaCarousel">
+          <div class="slides-track">
+            <div class="slide">
+              <img src="https://images.unsplash.com/photo-1538485399081-7191377e8241?q=80&w=2600&auto=format&fit=crop" alt="Seoul city skyline at night" loading="eager" />
             </div>
-            <button class="carousel-btn prev" aria-label="Previous image">‹</button>
-            <button class="carousel-btn next" aria-label="Next image">›</button>
-            <div class="dots" aria-hidden="true"></div>
+            <div class="slide">
+              <img src="https://images.unsplash.com/photo-1535189043414-47a3c49a0bed?q=80&w=2600&auto=format&fit=crop" alt="Traditional Korean hanok village street" loading="lazy" />
+            </div>
+            <div class="slide">
+              <img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?q=80&w=2600&auto=format&fit=crop" alt="Korean street food and market atmosphere" loading="lazy" />
+            </div>
+            <div class="slide">
+              <img src="https://images.unsplash.com/photo-1548115184-bc6544d06a58?q=80&w=2600&auto=format&fit=crop" alt="Seoul skyline and city lights" loading="lazy" />
+            </div>
           </div>
-          <p class="image-credit">Photos: Unsplash (license-friendly for commercial/editorial use)</p>
+
+          <div class="hero-overlay"></div>
+
+          <div class="container hero-content">
+            <p class="eyebrow">Korean context media for global readers</p>
+            <h1>Korea, beyond the headline.</h1>
+            <p class="sub">Read Korea like locals do. Get the context, sentiment, and stories that don’t show up in global summaries.</p>
+            <div class="cta-group">
+              <a class="btn btn-primary" href="article.html">Read Today’s Story</a>
+              <a class="btn btn-ghost" href="#membership">Join the Brief</a>
+            </div>
+          </div>
+
+          <button class="carousel-btn prev" aria-label="Previous image">‹</button>
+          <button class="carousel-btn next" aria-label="Next image">›</button>
+          <div class="dots" aria-hidden="true"></div>
         </div>
       </section>
 
