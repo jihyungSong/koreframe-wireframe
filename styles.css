@@ -89,4 +89,34 @@ nav a[aria-current="page"] { color: #fff; font-weight: 700; }
 .footer-links a:hover{color:#fff}
 @media (max-width:860px){.footer-inner{flex-direction:column}}
 
-.annual-note{margin:10px 0 0;color:#b9c8f8;font-size:.95rem}
+
+.pricing-cta-stack{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:10px}
+.annual-highlight{
+  width:min(640px, 92%);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  padding:12px 14px;
+  border-radius:12px;
+  border:1px solid #4f6ec8;
+  background:linear-gradient(145deg, rgba(121,168,255,.16), rgba(121,168,255,.08));
+}
+.annual-badge{
+  font-size:.72rem;
+  font-weight:800;
+  letter-spacing:.5px;
+  color:#0d1f4e;
+  background:#9ec0ff;
+  padding:4px 8px;
+  border-radius:999px;
+  white-space:nowrap;
+}
+.annual-text{display:flex;flex-direction:column;align-items:flex-start;line-height:1.3;color:#e8efff;flex:1}
+.annual-text strong{font-size:1.02rem}
+.annual-text span{font-size:.88rem;color:#c6d7ff}
+.annual-btn{white-space:nowrap;border-color:#7ea6ff;background:rgba(12,24,58,.28)}
+@media (max-width:860px){
+  .annual-highlight{flex-direction:column;align-items:flex-start}
+  .annual-btn{width:100%}
+}
