@@ -16,13 +16,12 @@
       <div class="container nav">
         <div class="logo"><img src="assets/koreframe-icon.svg" alt="Koreframe icon" class="logo-icon" /> <span>Koreframe</span></div>
         <nav>
-          <a href="#why">Why</a>
-          <a href="#latest">Latest</a>
+          <a href="#home">Home</a>
+          <a href="#briefs">Briefs</a>
           <a href="#membership">Membership</a>
-          <a href="article.html">Sample Article</a>
-          <a href="article-uk.html">UK-tone Sample</a>
+          <a href="#">Sign in</a>
         </nav>
-        <a class="btn btn-primary" href="#membership">Join the Brief</a>
+        <a class="btn btn-primary" href="#membership">Start Membership</a>
       </div>
     </header>
 
@@ -30,18 +29,10 @@
       <section class="hero-visual" id="home" aria-label="Korean visual hero">
         <div class="hero-carousel" id="koreaCarousel">
           <div class="slides-track">
-            <div class="slide">
-              <img src="https://images.unsplash.com/photo-1538485399081-7191377e8241?q=80&w=2600&auto=format&fit=crop" alt="Seoul city skyline at night" loading="eager" />
-            </div>
-            <div class="slide">
-              <img src="https://images.unsplash.com/photo-1535189043414-47a3c49a0bed?q=80&w=2600&auto=format&fit=crop" alt="Traditional Korean hanok village street" loading="lazy" />
-            </div>
-            <div class="slide">
-              <img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?q=80&w=2600&auto=format&fit=crop" alt="Korean street food and market atmosphere" loading="lazy" />
-            </div>
-            <div class="slide">
-              <img src="https://images.unsplash.com/photo-1548115184-bc6544d06a58?q=80&w=2600&auto=format&fit=crop" alt="Seoul skyline and city lights" loading="lazy" />
-            </div>
+            <div class="slide"><img src="https://images.unsplash.com/photo-1538485399081-7191377e8241?q=80&w=2600&auto=format&fit=crop" alt="Seoul city skyline at night" loading="eager" /></div>
+            <div class="slide"><img src="https://images.unsplash.com/photo-1535189043414-47a3c49a0bed?q=80&w=2600&auto=format&fit=crop" alt="Traditional Korean hanok village street" loading="lazy" /></div>
+            <div class="slide"><img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?q=80&w=2600&auto=format&fit=crop" alt="Korean street food and market atmosphere" loading="lazy" /></div>
+            <div class="slide"><img src="https://images.unsplash.com/photo-1548115184-bc6544d06a58?q=80&w=2600&auto=format&fit=crop" alt="Seoul skyline and city lights" loading="lazy" /></div>
           </div>
 
           <div class="hero-overlay"></div>
@@ -49,11 +40,12 @@
           <div class="container hero-content">
             <p class="eyebrow">Korean context media for global readers</p>
             <h1>Korea, beyond the headline.</h1>
-            <p class="sub">Read Korea like locals do. Get the context, sentiment, and stories that don’t show up in global summaries.</p>
+            <p class="sub">Read Korea like locals do.</p>
             <div class="cta-group">
               <a class="btn btn-primary" href="article.html">Read Today’s Story</a>
-              <a class="btn btn-ghost" href="#membership">Join the Brief</a>
+              <a class="btn btn-ghost" href="#membership">Join Membership</a>
             </div>
+            <p class="micro-proof">Weekly brief for globally curious readers.</p>
           </div>
 
           <button class="carousel-btn prev" aria-label="Previous image">‹</button>
@@ -66,43 +58,51 @@
         <div class="container">
           <h2>Why Koreframe</h2>
           <div class="grid-3">
-            <article class="card"><h3>Context</h3><p>한국 사회의 배경을 짚어줘요.</p></article>
-            <article class="card"><h3>Sentiment</h3><p>현지 반응의 결을 읽어줘요.</p></article>
-            <article class="card"><h3>Decode</h3><p>번역으로 안 보이는 뉘앙스를 해설해요.</p></article>
+            <article class="card"><h3>Context</h3><p>We explain the social and cultural background behind each story.</p></article>
+            <article class="card"><h3>Sentiment</h3><p>See how local reactions split and why those reactions matter.</p></article>
+            <article class="card"><h3>Decode</h3><p>Understand the nuance that gets lost in headline-only coverage.</p></article>
           </div>
+          <p class="section-link"><a href="#briefs">See sample brief →</a></p>
         </div>
       </section>
 
-      <section id="latest" class="section alt">
+      <section id="briefs" class="section alt">
         <div class="container">
           <h2>Latest Briefs</h2>
           <div class="grid-2">
             <article class="post-card">
-              <span class="tag">K-Society</span>
+              <span class="tag">K-Society · Free Preview</span>
               <h3>No-kids zones in Korea: the debate isn’t really about kids</h3>
-              <p>Free preview + members-only deep context</p>
+              <p>What looks like a parenting issue is often a public-space and labour issue.</p>
               <a href="article.html">Read article →</a>
             </article>
             <article class="post-card premium">
-              <span class="tag">Premium</span>
+              <span class="tag">K-Language · Members Only</span>
               <h3>Why “hyung” at work changes power dynamics</h3>
-              <p>Language hierarchy decoded with real reactions.</p>
+              <p>Language hierarchy decoded with real-world reactions.</p>
               <a href="#membership">Unlock with membership →</a>
             </article>
           </div>
+          <p class="section-link"><a href="#">Browse all briefs →</a></p>
         </div>
       </section>
 
       <section id="membership" class="section paywall">
         <div class="container paywall-inner">
           <h2>Membership</h2>
-          <p><strong>Free</strong>: headline + excerpt</p>
-          <p><strong>Pro</strong>: full stories + deeper analysis</p>
+          <p class="price">$2.9/month</p>
+          <div class="plans">
+            <p><strong>Free</strong> — headline + excerpt</p>
+            <p><strong>Pro</strong> — full stories + deep-dive analysis</p>
+            <p><strong>Pro</strong> — premium archive access</p>
+          </div>
           <a class="btn btn-primary" href="#">Start Membership</a>
+          <p class="section-link small"><a href="#">View full benefits →</a></p>
         </div>
       </section>
     </main>
-      <script>
+
+    <script>
       (function initCarousel(){
         const root = document.getElementById('koreaCarousel');
         if (!root) return;
@@ -127,16 +127,8 @@
           track.style.transform = `translateX(-${idx * 100}%)`;
           dots.forEach((d, i) => d.classList.toggle('active', i === idx));
         }
-
-        function go(n){
-          idx = (n + slides.length) % slides.length;
-          render();
-        }
-
-        function auto(){
-          clearInterval(timer);
-          timer = setInterval(() => go(idx + 1), 4500);
-        }
+        function go(n){ idx = (n + slides.length) % slides.length; render(); }
+        function auto(){ clearInterval(timer); timer = setInterval(() => go(idx + 1), 4500); }
 
         prev.addEventListener('click', () => { go(idx - 1); auto(); });
         next.addEventListener('click', () => { go(idx + 1); auto(); });
@@ -148,6 +140,5 @@
         auto();
       })();
     </script>
-
   </body>
 </html>
