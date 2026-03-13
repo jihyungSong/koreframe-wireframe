@@ -222,8 +222,9 @@
         }
 
         function render(){
-          const shift = (100 / slidesPerView) * idx;
-          track.style.transform = `translateX(-${shift}%)`;
+          const target = slides[idx];
+          const x = target ? target.offsetLeft : 0;
+          track.style.transform = `translateX(-${x}px)`;
           const dots = Array.from(root.querySelectorAll('.dot'));
           dots.forEach((d, i) => d.classList.toggle('active', i === idx));
         }
